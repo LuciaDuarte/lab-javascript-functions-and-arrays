@@ -52,6 +52,7 @@ function sum(arr) {
   }
   return auxSum;
 }
+
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 // Iteration #4: Calculate the average
@@ -131,6 +132,19 @@ const wordsUnique = [
 ];
 
 // Iteration #6: Find elements
+function doesWordExist(arr, searchWord) {
+  if (arr.length !== 0) {
+    for (let word of arr) {
+      if (searchWord === word) {
+        return true;
+      }
+    }
+    return false;
+  } else {
+    return null;
+  }
+}
+
 const wordsFind = [
   'machine',
   'subset',
@@ -143,6 +157,20 @@ const wordsFind = [
 ];
 
 // Iteration #7: Count repetition
+function howManyTimes(arr, searchWord) {
+  if (arr.length !== 0) {
+    let counter = 0;
+    for (const word of arr) {
+      if (word === searchWord) {
+        counter++;
+      }
+    }
+    return counter;
+  } else {
+    return 0;
+  }
+}
+
 const wordsCount = [
   'machine',
   'matter',
